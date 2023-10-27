@@ -2,7 +2,7 @@ import CartWidgetartWidget from "../CartWidget/CartWidget"
 
 const NavBar = ( ) => {
     return(
-        <nav> 
+        <nav id="nav"> 
             <h3> ZapasFlow </h3>
             <div>
                 <ul>
