@@ -9,7 +9,6 @@ const NavBar = ( ) => {
                     <li> <a href="#">Marcas</a> </li>
                     <li> <a href="#">Zapatillas</a> </li>
                     <li> <a href="#">Botines</a> </li>
-                    <li> <a href="#">Ojotas/Sandalias</a> </li>
                 </ul>
             </div>
             <CartWidgetartWidget/>
