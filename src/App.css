@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url("./img/muchas-tarjetas-visita-blanco.jpg");
+  background-size: cover;
 }
 
 .App-logo {
@@ -37,29 +39,6 @@
   }
 }
 
-*{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-#nav{
-  display: flex;
-  margin-left: 10px;
-  padding: 10px 70px;
-  background-color: #282c3446;
-}
-ul{
-  display: flex;
-  margin-left: 150px;
-}
-li{
-  margin-left: 40px;
-}
-a{
-  color: black;
-}
 
 
 

@@ -1,18 +1,20 @@
+import { zapatillaAdidas, zapatillaNike, botinNike } from "./img/images"
+
 const products =[ 
         {
             id: "1" ,
-            name: "Botines" ,
-            price: "$89.000" ,
+            name: "Botines Nike" ,
+            price: "89.000" ,
             category: "Botines" ,
-            img:"c:\Users\Usuario\Desktop\Node JS- curso\EcommerceJb\ecommerce\src\img\botin1images.jpeg" ,
+            img: botinNike ,
             stock: 20 ,
-            description: "descripcion zapatillas"
+            description: "descripcion Botines"
         } ,
         {
-            id: "2" , name: "ojotas" , price: "1000" , category: "zapatillas" , img: "#" , stock: 20 , description: "descripcion zapatillas"
+            id: "2" , name: "zapatillas Nike" , price: "50.000" , category: "zapatillas" , img: zapatillaNike , stock: 30 , description: "descripcion zapatillas"
         } ,
         {
-            id: "3" , name: "ojotas" , price: "1000" , category: "zapatillas" , img: "#" , stock: 20 , description: "descripcion zapatillas"
+            id: "3" , name: "Zapatillas Adidas" , price: "45.000" , category: "zapatillas" , img: zapatillaAdidas , stock: 25 , description: "descripcion zapatillas"
         } 
     ]
 
@@ -34,3 +36,15 @@ const products =[
 
     }
 
+    export const getProductByCategory = (category) => {
+
+        return new Promise((resolve) => {
+            const filteredProducts = products.filter(
+                (product) => product.category.toLowerCase() === category.toLowerCase()
+            );
+    
+        setTimeout(() => {
+            resolve(filteredProducts);
+            }, 500);
+        });
+    };

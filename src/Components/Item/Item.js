@@ -1,29 +1,30 @@
-import "./Item.css"
+import { NavLink, Link } from "react-router-dom";
+import "./Item.css";
 
 const Item = ({id, name, img, price, stock}) => {
     return (
-        <article className="CardItem">
-            <header className="Header">
-                <h2 className="ItemHeader">
+        <article className="card-item">
+            <header className="header">
+                <h2 className="item-header">
                     {name}
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg"/>
+                <img src={img} alt={name} className="Item-Img" />
             </picture>
             <section>
                 <p className="Info">
-                    precio= ${price}
+                    Precio: ${price}
                 </p>
                 <p className="Info">
-                    stock disponible= {stock}
+                    Stock disponible: {stock}
                 </p>
             </section>
-            <footer className="ItemFooter">
-                <button className="option">ver detalles </button>
+            <footer className="Item-Footer">
+            <Link to={`/item/${id}`} className="option">Ver Detalles</Link>
             </footer> 
         </article>
     )
 }
 
-export default Item
+export default Item;
